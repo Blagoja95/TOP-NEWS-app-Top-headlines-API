@@ -1,0 +1,24 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "top news from top news api",
+  "main": "index.html",
+  "scripts": {
+    "goSass": "sass --watch src/sass/main.scss:src/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blagoja95/wether-app-Top-headlines-API.git"
+  },
+  "author": "Denzel95 Blagoja95",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blagoja95/wether-app-Top-headlines-API/issues"
+  },
+  "homepage": "https://github.com/Blagoja95/wether-app-Top-headlines-API#readme",
+  "dependencies": {
+    "parcel": "^2.6.2",
+    "sass": "^1.53.0"
+  }
+}
