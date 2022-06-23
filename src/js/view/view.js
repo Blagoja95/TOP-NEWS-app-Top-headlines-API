@@ -13,7 +13,9 @@ export class View {
     const html = `
       <div class="press" >
         <h2 class="title">${data.title}</h2>
-        <img src="${data.urlToImage}" alt="press ${data.autor}" class="img-press">
+        <img src="${
+          data.urlToImage ? data.urlToImage : "src/images/press.jpg"
+        }" alt="press ${data.autor}" class="img-press">
         <div class="desc">
           <p class="description">${data.description}</p>
           <a href="${data.url}"  class="link-more">More ></a>
@@ -29,7 +31,6 @@ export class View {
   }
 
   displatArticles = (articles) => {
-    console.log(articles);
     this._removeElement(tags.news);
 
     let i = 0;
