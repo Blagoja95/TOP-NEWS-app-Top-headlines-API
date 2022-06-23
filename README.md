@@ -1,8 +1,8 @@
-# JS Zadatak:
+# Zadatak:
 
 Prikazati top news sa zadatog api endpoint-a (link sa dokumentacijom api-ja je ispod).
-Korisnik treba da moze da vidi top news za odradjenu zemlju GB ili US. (Srbiju ne koristimo jer
-su neke vesti na cirilici pa search ne bi radio). Vesti su prikazane kao thumbnail-ovi (title, slika i
+Korisnik treba da moze da vidi top news za odradjenu zemlju GB ili US. 
+Vesti su prikazane kao thumbnail-ovi (title, slika i
 opis).
 
 Klikom na More > korisnik otvara vest gde mu se prikazuju title, slika i sadrzaj vesti. (odabir
@@ -27,10 +27,6 @@ zemlje je enable).
 
 Resenje zadatka treba da bude responsive. (Layout na manjim uredjajima je ostavljan
 kandidatu na mastu).
-
-Zadatak nije potrebno uraditi u celosti da bi bio validan i pregledan.
-Zadatak je pozeljno uraditi kao projekat koji ce jednog dana ici na produkciju i na kom ce raditi
-tim ljudi i odrzavati ga.
 
 API: https://newsapi.org/docs/endpoints/top-headlines
 
