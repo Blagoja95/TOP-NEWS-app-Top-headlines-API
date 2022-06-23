@@ -1,32 +1,16 @@
-# Zadatak:
+# Challange:
 
-Prikazati top news sa zadatog api endpoint-a (link sa dokumentacijom api-ja je ispod).
-Korisnik treba da moze da vidi top news za odradjenu zemlju GB ili US. 
-Vesti su prikazane kao thumbnail-ovi (title, slika i
-opis).
+Show top news from the given api endpoint (link with api documentation is below). The user should be able to see the top news for the completed country GB or US. The news is presented as thumbnails (title, image and description).
 
-Klikom na More > korisnik otvara vest gde mu se prikazuju title, slika i sadrzaj vesti. (odabir
-zemlje je disable). Sadrzaj (content) koji dolazi sa servera je ogranicen na 260 karaktera posto
-koristimo Developer account i to je u redu.
+Click on More> the user opens the news where the headline, image and content of the news are displayed. (country selection is disable). Content coming from the server is limited to 260 characters since we use a Developer account and that's fine.
 
-Korisnik na sekciji Categories moze da vidi top 5 vesti za odredjene katagorije koje api
-dozvoljava(Entertainment, General, Health, Science, Sport, Technology). Na izlistane vesti za
-svaku kategoriju je moguce kliknuti posle cega se otvara gore pomenuti layout za vest.
-Na svaku kategoriju moze da se klikne posle cega aplikacija treba da prikaze sve vesti za
-kliknutu kategoriju.
+In the Categories section, the user can see the top 5 news for certain categories that API allows (Entertainment, General, Health, Science, Sports, Technology). You can click on the listed news for each category, after which the above-mentioned news layout opens. Each category can be clicked, after which the application should display all the news for the clicked category.
 
-Kada klikne ne neku od kategorija ucitavaju se sve top vesti za tu kategoriju (odabir zemlje je
-enable i korisnik moze da menja za koju zemlju zeli vesti iz kategorije npr science). Svaka
-kategorija moze da se expand/collapse i vesti su prikazane u jednom redu sa indikatorom ako
-nisu sve vidljive. Klikom na idikator < ili > vesti se pomeraju za jednu poziciju uz odgovarajucu
-tranziciju/animaciju po izboru.
+When he clicks on one of the categories, all the top news for that category are loaded (country selection is enabled and the user can change for which country he wants news from the category, eg science). Each category can expand / collapse and news are displayed in a row with an indicator if not all are visible. Clicking on the <or> indicator moves the news one position with the appropriate transition / animation of your choice.
 
-Search sekcija sadrzi input polje u kojem korisnik moze da unese termin koji zeli da pretrazuje u
-top news. Na stranici se prikaziju sve vesti koje zadovoljavaju kriterijum pretrage. (promena
-zemlje je enable).
+The search section contains an input field in which the user can enter the term he wants to search in the top news. The page displays all news that meet the search criteria. (change of country made possible).
 
-Resenje zadatka treba da bude responsive. (Layout na manjim uredjajima je ostavljan
-kandidatu na mastu).
+The solution of the task should be responsive. (Layout on smaller devices is left to the candidate on the mast).
 
 API: https://newsapi.org/docs/endpoints/top-headlines
 
