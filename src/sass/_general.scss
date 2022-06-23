@@ -27,15 +27,20 @@ header {
 }
 
 .nav-link {
+  border: 1px solid transparent;
   text-decoration: none;
-  cursor: pointer;
   font-size: 2rem;
   padding: 2rem;
-}
 
-.nav-link:active {
-  background-color: gray;
-  color: white;
+  &:hover {
+    cursor: pointer;
+    border-color: gray;
+  }
+
+  &:active {
+    background-color: gray;
+    color: white;
+  }
 }
 
 // .btn {
@@ -96,4 +101,9 @@ header {
   font-size: 1.8rem;
   text-decoration: none;
   display: inline-block;
+}
+
+.active {
+  background-color: gray;
+  color: white;
 }

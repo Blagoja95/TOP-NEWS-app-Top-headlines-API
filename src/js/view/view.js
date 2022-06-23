@@ -18,7 +18,7 @@ export class View {
         }" alt="press ${data.autor}" class="img-press">
         <div class="desc">
           <p class="description">${data.description}</p>
-          <a href="${data.url}"  class="link-more">More ></a>
+          <a href="${data.url}"  class="link-more" target="_blank">More ></a>
         </div>
       </div>
     `;
@@ -39,6 +39,24 @@ export class View {
       i++;
     }
   };
-}
 
-// console.log(tags.news);
+  bindChangeCountry = (handler) => {
+    tags.countries.forEach((countrie, index) => {
+      countrie.addEventListener("click", (e) => {
+        e.preventDefault();
+        handler(e.target.innerHTML.toLowerCase());
+
+        // clear then add active class
+        tags.countries.forEach((countrie) =>
+          countrie.classList.remove("active")
+        );
+        countrie.classList.add("active");
+
+        // title
+        tags.topNewsTitleOrigin.innerHTML = `${
+          index == 1 ? "United States" : "Great Britain"
+        }`;
+      });
+    });
+  };
+}
