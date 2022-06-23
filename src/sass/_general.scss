@@ -7,10 +7,12 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: white;
+  background-color: burlywood;
   display: flex;
   flex-direction: column;
   align-items: center;
+  // background-image: url("/images/news.jpg");
+  // background-repeat: no-repeat;
 }
 
 header {
@@ -21,20 +23,33 @@ header {
 }
 .navigation {
   min-height: 6rem;
+  display: flex;
 }
 
-.btn {
+.nav-link {
+  text-decoration: none;
   cursor: pointer;
-  border: none;
-  display: inline-block;
   font-size: 2rem;
-  // background-color: gray;
   padding: 2rem;
 }
-.btn:active {
+
+.nav-link:active {
   background-color: gray;
   color: white;
 }
+
+// .btn {
+//   cursor: pointer;
+//   border: none;
+//   display: inline-block;
+//   font-size: 2rem;
+//   // background-color: gray;
+//   padding: 2rem;
+// }
+// .btn:active {
+//   background-color: gray;
+//   color: white;
+// }
 
 .main-content {
   max-width: 100rem;
@@ -56,7 +71,7 @@ header {
   width: 100%;
 }
 
-img {
+.press {
   margin: 1rem 0;
   width: 100%;
 }

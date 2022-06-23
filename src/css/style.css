@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: burlywood;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,17 +24,17 @@ header {
 
 .navigation {
   min-height: 6rem;
+  display: flex;
 }
 
-.btn {
+.nav-link {
+  text-decoration: none;
   cursor: pointer;
-  border: none;
-  display: inline-block;
   font-size: 2rem;
   padding: 2rem;
 }
 
-.btn:active {
+.nav-link:active {
   background-color: gray;
   color: white;
 }
@@ -58,7 +58,7 @@ header {
   width: 100%;
 }
 
-img {
+.press {
   margin: 1rem 0;
   width: 100%;
 }
@@ -83,6 +83,21 @@ img {
   font-size: 1.8rem;
   text-decoration: none;
   display: inline-block;
+}
+
+label {
+  font-size: 2rem;
+}
+
+#submit {
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
