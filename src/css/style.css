@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  background-color: burlywood;
+  overflow-x: hidden;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +26,83 @@ header {
 .navigation {
   min-height: 6rem;
   display: flex;
+  align-items: center;
+}
+
+.navigation-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: none;
+}
+
+.menu,
+.close {
+  cursor: pointer;
+}
+
+.btn-menu {
+  border: none;
+}
+
+.Menu-container {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  margin: 10% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  transition: 0.4s ease;
+}
+
+/* it hides the checkbox*/
+#Toggle {
+  display: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: -8px;
+  transition: 0.4s ease;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: 8px;
+}
+
+#Toggle:checked + label #active {
+  transform: rotate(45deg);
+}
+
+#Toggle:checked + label #active::before {
+  transform: rotate(-90deg) translateX(-8px);
+}
+
+#Toggle:checked + label #active::after {
+  display: none;
+}
+
+.hidden {
+  display: none;
 }
 
 .nav-link {
@@ -32,9 +110,12 @@ header {
   cursor: pointer;
   font-size: 2rem;
   padding: 2rem;
+  border: 1px solid gray;
+  color: cornflowerblue;
 }
 
-.nav-link:active {
+.nav-link--control:focus,
+.nav-link--country:focus {
   background-color: gray;
   color: white;
 }
@@ -49,6 +130,8 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  justify-items: center;
+  margin-top: 3rem;
 }
 
 .press {
@@ -61,6 +144,7 @@ header {
 
 .img-press {
   width: 100%;
+  margin: 1rem 0;
 }
 
 .top-news {
@@ -72,7 +156,7 @@ header {
 
 .desc {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .description {
@@ -83,6 +167,7 @@ header {
   font-size: 1.8rem;
   text-decoration: none;
   display: inline-block;
+  align-self: flex-end;
 }
 
 label {
@@ -98,6 +183,45 @@ label {
 
 select {
   height: 3rem;
+}
+
+placeholder {
+  height: 3rem;
+}
+
+.submit {
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 550px) {
+  .news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mobile-nav {
+    display: inline-block;
+    align-self: center;
+  }
+  .close {
+    display: none;
+  }
+  .navigation-control {
+    display: none;
+  }
+  .navigation-country {
+    margin-right: 1rem;
+  }
+  .nav-link {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

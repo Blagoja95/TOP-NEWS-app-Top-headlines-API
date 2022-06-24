@@ -1,0 +1,33 @@
+@media screen and(max-width:750px) {
+  .news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and(max-width:550px) {
+  .news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mobile-nav {
+    display: inline-block;
+    align-self: center;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .navigation-control {
+    display: none;
+  }
+
+  .navigation-country {
+    margin-right: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}

@@ -11,14 +11,37 @@
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <a href="#" class="nav-link">Top News</a>
-        <a href="categories.html" class="nav-link">Categories</a>
-        <a href="search.html" class="nav-link">Search</a>
+      <nav class="mobile-nav hidden">
+        <!-- <button class="btn-menu">
+          <img src="/src/images/icon-hamburger.svg" class="menu" alt="menu" />
+          <img src="/src/images/icon-close.svg" class="close" alt="close" />
+        </button> -->
+        <input type="checkbox" id="Toggle" />
+
+        <label for="Toggle">
+          <div class="Menu-container">
+            <div class="line" id="active"></div>
+          </div>
+        </label>
       </nav>
-      <nav class="navigation">
-        <a href="#" class="nav-link">GB</a>
-        <a href="#" class="nav-link">US</a>
+      <nav class="navigation navigation-control">
+        <a href="#" class="nav-link nav-link--control">Top News</a>
+        <a href="categories.html" class="nav-link nav-link--control"
+          >Categories</a
+        >
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
+      </nav>
+
+      <nav class="navigation-mobile hidden">
+        <a href="#" class="nav-link nav-link--control">Top News</a>
+        <a href="categories.html" class="nav-link nav-link--control"
+          >Categories</a
+        >
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
+      </nav>
+      <nav class="navigation navigation-country">
+        <a href="#" class="nav-link nav-link--country">GB</a>
+        <a href="#" class="nav-link nav-link--country">US</a>
       </nav>
     </header>
     <main class="main-content">
