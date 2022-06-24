@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories</title>
     <link rel="stylesheet" href="src/css/style.css" />
+    <script
+      type="module"
+      src="src/js/controllers/controllerCategories.js"
+    ></script>
+    <title>Categories</title>
   </head>
   <body>
     <header>
@@ -16,13 +20,13 @@
       </nav>
       <nav class="navigation">
         <nav class="navigation">
-          <a href="#" class="nav-link nav-link--country">GB</a>
+          <a href="#" class="nav-link nav-link--country active">GB</a>
           <a href="#" class="nav-link nav-link--country">US</a>
         </nav>
       </nav>
     </header>
-    <section class="news">
-      <form action="#">
+    <section class="form-box">
+      <form class="form form--categories" name="categories">
         <label for="categories">Select a category:</label>
         <select name="news" id="news">
           <option value="entertainment">Entertainment</option>
@@ -35,5 +39,6 @@
         <input type="submit" id="submit" value="Submit" />
       </form>
     </section>
+    <section class="news"></section>
   </body>
 </html>

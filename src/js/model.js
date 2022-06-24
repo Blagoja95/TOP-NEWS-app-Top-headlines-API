@@ -27,7 +27,9 @@ export class Model {
   ) => {
     //   console.log(apikey, country);
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apikey}`
+      `https://newsapi.org/v2/top-headlines?country=${country}${
+        category == "" ? "" : "&" + category
+      }&apiKey=${apikey}`
     );
 
     const res = await data.json();
@@ -42,4 +44,9 @@ export class Model {
     this._getData("", "", country);
     this.onStateChange(this.state.articles);
   }
+
+  handleChangeCategory = (category) => {
+    this._getData(category, "");
+    this.onStateChange(this.state.articles);
+  };
 }
