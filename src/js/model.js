@@ -28,14 +28,16 @@ export class Model {
     //   console.log(apikey, country);
     const data = await fetch(
       `https://newsapi.org/v2/top-headlines?country=${country}${
-        category == "" ? "" : "&" + category
+        category == "" ? "" : "&category=" + category
       }&apiKey=${apikey}`
     );
 
     const res = await data.json();
     this.state.articles = res.articles;
 
+    console.dir(res.articles);
     this.onStateChange(this.state.articles);
+    return true;
   };
 
   // handle controler calls
@@ -45,8 +47,8 @@ export class Model {
     this.onStateChange(this.state.articles);
   }
 
-  handleChangeCategory = (category) => {
-    this._getData(category, "");
+  handleChangeCategory = async (category) => {
+    await this._getData(category, "");
     this.onStateChange(this.state.articles);
   };
 }
