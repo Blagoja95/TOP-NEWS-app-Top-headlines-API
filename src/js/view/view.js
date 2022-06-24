@@ -34,7 +34,7 @@ export class View {
   displatArticles = (articles) => {
     this._removeElement(tags.news);
 
-    if (articles.length === 0) {
+    if (Object.keys(articles).length === 0) {
       this._renderHtml([], tags.news);
       return;
     }
