@@ -59,4 +59,11 @@ export class View {
       });
     });
   };
+
+  bindChangeCategory = (handler) => {
+    tags.formCategories.addEventListener("submit", (e) => {
+      e.preventDefault();
+      handler(document.forms["categories"]["news"].value);
+    });
+  };
 }
