@@ -106,8 +106,8 @@ header {
 }
 
 .nav-link {
+  border: 1px solid transparent;
   text-decoration: none;
-  cursor: pointer;
   font-size: 2rem;
   padding: 2rem;
   border: 1px solid gray;
@@ -168,6 +168,11 @@ header {
   text-decoration: none;
   display: inline-block;
   align-self: flex-end;
+}
+
+.active {
+  background-color: gray;
+  color: white;
 }
 
 label {
