@@ -6,85 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="src/css/style.css" />
+    <script type="module" src="src/js/controllers/controller.js"></script>
     <title>TOP NEWS</title>
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <a href="#" class="nav-link">Top News</a>
-        <a href="categories.html"class="nav-link">Categories</a>
-        <a href="search.html"class="nav-link">Search</a>
-        <!-- <button class="btn btn-news">Top News</button>
-        <button class="btn btn-categories">Categories</button>
-        <button class="btn btn-search">Search</button> -->
+      <nav class="mobile-nav hidden">
+        <!-- <button class="btn-menu">
+          <img src="/src/images/icon-hamburger.svg" class="menu" alt="menu" />
+          <img src="/src/images/icon-close.svg" class="close" alt="close" />
+        </button> -->
+        <input type="checkbox" id="Toggle" />
+
+        <label for="Toggle">
+          <div class="Menu-container">
+            <div class="line" id="active"></div>
+          </div>
+        </label>
       </nav>
-      <nav class="navigation">
-        <a href="#"class="nav-link">GB</a>
-        <a href="#"class="nav-link">US</a>
-        <!-- <buton class="btn btn-gb">GB</buton>
-        <buton class="btn btn-us">US</buton> -->
+      <nav class="navigation navigation-control">
+        <a href="#" class="nav-link nav-link--control">Top News</a>
+        <a href="categories.html" class="nav-link nav-link--control"
+          >Categories</a
+        >
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
+      </nav>
+
+      <nav class="navigation-mobile hidden">
+        <a href="#" class="nav-link nav-link--control">Top News</a>
+        <a href="categories.html" class="nav-link nav-link--control"
+          >Categories</a
+        >
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
+      </nav>
+      <nav class="navigation navigation-country">
+        <a href="#" class="nav-link nav-link--country">GB</a>
+        <a href="#" class="nav-link nav-link--country">US</a>
       </nav>
     </header>
     <main class="main-content">
-      <h1 class="top-news">Top news from Great Britain:</h1>
-      <section class="news">
-        
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg" class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg"class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg"class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-        </div>
-        
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg"class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg"class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-
-          <div class="press">
-            <h2 class="title">Title</h2>
-            <img src="/images/press.jpg"class="img-press" alt="press" />
-            <div class="desc">
-              <p class="description">Description</p>
-              <a href="#" class="link-more">More ></a>
-            </div>
-          </div>
-        
-      </section>
+      <h1 class="top-news">
+        Top new<span class="z">Z</span> from
+        <span class="top-news--title-origin">Great Britain</span>:
+      </h1>
+      <section class="news"></section>
     </main>
   </body>
 </html>

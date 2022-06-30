@@ -1,17 +1,13 @@
-label {
-  font-size: 2rem;
+input {
+  height: 3rem;
 }
-#submit {
+.submit {
   height: 3rem;
   padding: 0 1rem;
   border: none;
   cursor: pointer;
   background-color: darkolivegreen;
   color: white;
-}
-
-select {
-  height: 3rem;
 }
 
 #Toggle {
@@ -51,20 +47,4 @@ select {
 
 .hidden {
   display: none;
-}
-
-.news {
-  max-width: 100rem;
-}
-
-.form--categories {
-  margin-top: 2rem;
-}
-
-label {
-  color: darkslategray;
-}
-
-select {
-  color: #787850;
 }

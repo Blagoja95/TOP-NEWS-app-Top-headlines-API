@@ -4,32 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories</title>
     <link rel="stylesheet" href="src/css/style.css" />
+
+    <script
+      type="module"
+      src="src/js/controllers/controllerCategories.js"
+    ></script>
+    <title>Categories</title>
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <a href="index.html" class="nav-link">Top News</a>
-        <a href="categories.html" class="nav-link">Categories</a>
-        <a href="search.html" class="nav-link">Search</a>
+      <nav class="mobile-nav hidden">
+        <!-- <button class="btn-menu">
+          <img src="/src/images/icon-hamburger.svg" class="menu" alt="menu" />
+          <img src="/src/images/icon-close.svg" class="close" alt="close" />
+        </button> -->
+        <input type="checkbox" id="Toggle" />
+
+        <label for="Toggle">
+          <div class="Menu-container">
+            <div class="line" id="active"></div>
+          </div>
+        </label>
+      </nav>
+      <nav class="navigation navigation-control">
+        <a href="index.html" class="nav-link nav-link--control">Top News</a>
+        <a href="#" class="nav-link nav-link--control">Categories</a>
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
+      </nav>
+      <nav class="navigation-mobile hidden">
+        <a href="index.html" class="nav-link nav-link--control">Top News</a>
+        <a href="#" class="nav-link nav-link--control">Categories</a>
+        <a href="search.html" class="nav-link nav-link--control">Search</a>
       </nav>
       <nav class="navigation">
-        <a href="#" class="nav-link">GB</a>
-        <a href="#" class="nav-link">US</a>
+        <a href="#" class="nav-link nav-link--country">GB</a>
+        <a href="#" class="nav-link nav-link--country">US</a>
       </nav>
     </header>
-    <form action="#">
-      <label for="categories">Select a category:</label>
-      <select name="news" id="news">
-        <option value="entertainment">Entertainment</option>
-        <option value="general">General</option>
-        <option value="health">Health</option>
-        <option value="science">Sceince</option>
-        <option value="sport">Sport</option>
-        <option value="technology">Technology</option>
-      </select>
-      <input type="submit" id="submit" value="Submit" />
-    </form>
+    <section class="form-box">
+      <form class="form form--categories" name="categories">
+        <label for="categories">Select a category:</label>
+        <select name="news" id="news">
+          <option value="entertainment">Entertainment</option>
+          <option value="general">General</option>
+          <option value="health">Health</option>
+          <option value="science">Sceince</option>
+          <option value="sport">Sport</option>
+          <option value="technology">Technology</option>
+        </select>
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </section>
+    <section class="news"></section>
   </body>
 </html>
