@@ -9,3 +9,6 @@ export const topNewsTitleOrigin = document.querySelector(
 
 // categories
 export const formCategories = document.querySelector(".form--categories");
+
+// search
+export const formSearch = document.querySelector(".form--search");

@@ -28,25 +28,30 @@ export class Model {
     //   console.log(apikey, country);
     const data = await fetch(
       `https://newsapi.org/v2/top-headlines?country=${country}${
-        category == "" ? "" : "&" + category
-      }&apiKey=${apikey}`
+        category == "" ? "" : "&category=" + category
+      }${search == "" ? "" : "&q=" + search}&apiKey=${apikey}`
     );
 
     const res = await data.json();
     this.state.articles = res.articles;
 
     this.onStateChange(this.state.articles);
+    return true;
   };
 
   // handle controler calls
-
   handleChangeCountry(country) {
     this._getData("", "", country);
     this.onStateChange(this.state.articles);
   }
 
-  handleChangeCategory = (category) => {
-    this._getData(category, "");
+  handleChangeCategory = async (category) => {
+    await this._getData(category, "");
+    this.onStateChange(this.state.articles);
+  };
+
+  handleChangeSearch = async (search) => {
+    await this._getData("", search);
     this.onStateChange(this.state.articles);
   };
 }

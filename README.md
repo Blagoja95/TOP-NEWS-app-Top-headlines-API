@@ -1,3 +1,6 @@
+# !!! API msg: Requests from the browser are not allowed on the Developer plan, except from localhost.
+          find solution TO DO
+
 # Challange:
 
 Show top news from the given api endpoint (link with api documentation is below). The user should be able to see the top news for the completed country GB or US. The news is presented as thumbnails (title, image and description).
