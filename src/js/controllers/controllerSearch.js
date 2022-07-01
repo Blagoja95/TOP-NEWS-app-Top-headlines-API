@@ -31,3 +31,11 @@ class Controller {
 }
 
 const app = new Controller(new Model(), new View());
+
+// Hamburger menu
+// const menuBtn = document.querySelector(".btn-menu");
+const menuBtn = document.querySelector(".line");
+const navigation = document.querySelector(".navigation-mobile");
+menuBtn.addEventListener("click", function () {
+  navigation.classList.toggle("hidden");
+});

@@ -5,18 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
+    <!-- <script type="module" src="src/js/controllers/controller.js"></script> -->
     <script type="module" src="src/js/controllers/controllerSearch.js"></script>
     <title>Search</title>
   </head>
   <body>
     <header>
-      <nav class="navigation">
+      <nav class="mobile-nav hidden">
+        <!-- <button class="btn-menu">
+          <img src="/src/images/icon-hamburger.svg" class="menu" alt="menu" />
+          <img src="/src/images/icon-close.svg" class="close" alt="close" />
+        </button> -->
+        <input type="checkbox" id="Toggle" />
+
+        <label for="Toggle">
+          <div class="Menu-container">
+            <div class="line" id="active"></div>
+          </div>
+        </label>
+      </nav>
+      <nav class="navigation navigation-control">
         <a href="index.html" class="nav-link nav-link--control">Top News</a>
         <a href="categories.html" class="nav-link nav-link--control"
           >Categories</a
         >
         <a href="#" class="nav-link nav-link--control active">Search</a>
       </nav>
+
+      <nav class="navigation-mobile hidden">
+        <a href="index.html" class="nav-link nav-link--control">Top News</a>
+        <a href="categories.html" class="nav-link nav-link--control"
+          >Categories</a
+        >
+        <a href="#" class="nav-link nav-link--control active">Search</a>
+      </nav>
+
       <nav class="navigation">
         <a href="#" class="nav-link nav-link--country active">GB</a>
         <a href="#" class="nav-link nav-link--country">US</a>

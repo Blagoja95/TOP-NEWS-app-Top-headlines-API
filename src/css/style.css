@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap");
 * {
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Cormorant Garamond", sans-serif;
 }
 
 header {
@@ -21,12 +23,14 @@ header {
   max-width: 100rem;
   width: 100%;
   justify-content: space-between;
+  background-color: #fee43a;
 }
 
 .navigation {
   min-height: 6rem;
   display: flex;
   align-items: center;
+  font-weight: 700;
 }
 
 .navigation-mobile {
@@ -123,6 +127,7 @@ header {
 .main-content {
   max-width: 100rem;
   width: 100%;
+  background-color: #f7f7f2;
 }
 
 .news {
@@ -135,7 +140,7 @@ header {
 }
 
 .press {
-  border: 1px solid black;
+  border: 6px solid #3a4a47;
   border-radius: 10px;
   padding: 2rem;
   width: 100%;
@@ -143,15 +148,27 @@ header {
 }
 
 .img-press {
+  margin: 1rem 0;
   width: 100%;
   margin: 1rem 0;
 }
 
 .top-news {
+  color: rgb(38, 43, 38);
   font-size: 2.8rem;
   font-weight: 500;
   padding-left: 8rem;
   margin-top: 1rem;
+}
+
+.z {
+  background: linear-gradient(to bottom, white, blue, red);
+  color: #fee43a;
+}
+
+.title {
+  color: rgb(19, 37, 20);
+  font-weight: 700;
 }
 
 .desc {
@@ -160,7 +177,9 @@ header {
 }
 
 .description {
+  color: #313635;
   font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .link-more {
@@ -175,6 +194,33 @@ header {
   color: white;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 99rem;
+  width: 100%;
+  min-height: 10rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  padding: 2rem;
+}
+
+footer p {
+  font-size: 2rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fee43a;
+}
+
 label {
   font-size: 2rem;
 }
@@ -184,13 +230,70 @@ label {
   padding: 0 1rem;
   border: none;
   cursor: pointer;
+  background-color: darkolivegreen;
+  color: white;
 }
 
 select {
   height: 3rem;
 }
 
-placeholder {
+#Toggle {
+  display: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: -8px;
+  transition: 0.4s ease;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: 8px;
+}
+
+#Toggle:checked + label #active {
+  transform: rotate(45deg);
+}
+
+#Toggle:checked + label #active::before {
+  transform: rotate(-90deg) translateX(-8px);
+}
+
+#Toggle:checked + label #active::after {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.news {
+  max-width: 100rem;
+}
+
+.form--categories {
+  margin-top: 2rem;
+}
+
+label {
+  color: darkslategray;
+}
+
+select {
+  color: #787850;
+}
+
+input {
   height: 3rem;
 }
 
@@ -199,6 +302,51 @@ placeholder {
   padding: 0 1rem;
   border: none;
   cursor: pointer;
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.form-sectiom {
+  margin-top: 2rem;
+}
+
+#Toggle {
+  display: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: -8px;
+  transition: 0.4s ease;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: cornflowerblue;
+  top: 8px;
+}
+
+#Toggle:checked + label #active {
+  transform: rotate(45deg);
+}
+
+#Toggle:checked + label #active::before {
+  transform: rotate(-90deg) translateX(-8px);
+}
+
+#Toggle:checked + label #active::after {
+  display: none;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 750px) {
@@ -213,6 +361,7 @@ placeholder {
   .mobile-nav {
     display: inline-block;
     align-self: center;
+    padding-left: 1rem;
   }
   .close {
     display: none;
@@ -226,6 +375,16 @@ placeholder {
   .nav-link {
     font-size: 1.4rem;
     padding: 1rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .top-news {
+    padding-left: 5rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .top-news {
+    font-size: 2.2rem;
   }
 }
 

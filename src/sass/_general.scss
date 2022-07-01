@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap");
+
 * {
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-image: url("/images/news.jpg");
+  font-family: "Cormorant Garamond", sans-serif;
+  // background-image: url("/src/images/newspaper.jpg");
   // background-repeat: no-repeat;
 }
 
@@ -21,11 +24,13 @@ header {
   max-width: 100rem;
   width: 100%;
   justify-content: space-between;
+  background-color: #fee43a;
 }
 .navigation {
   min-height: 6rem;
   display: flex;
   align-items: center;
+  font-weight: 700;
 }
 
 .navigation-mobile {
@@ -122,6 +127,7 @@ header {
 .main-content {
   max-width: 100rem;
   width: 100%;
+  background-color: #f7f7f2;
 }
 
 .news {
@@ -135,7 +141,7 @@ header {
 }
 
 .press {
-  border: 1px solid black;
+  border: 6px solid #3a4a47;
   border-radius: 10px;
   padding: 2rem;
   width: 100%;
@@ -143,15 +149,27 @@ header {
 }
 
 .img-press {
+  margin: 1rem 0;
   width: 100%;
   margin: 1rem 0;
 }
 
 .top-news {
+  color: rgb(38, 43, 38);
   font-size: 2.8rem;
   font-weight: 500;
   padding-left: 8rem;
   margin-top: 1rem;
+}
+
+.z {
+  background: linear-gradient(to bottom, white, blue, red);
+  color: #fee43a;
+}
+
+.title {
+  color: rgb(19, 37, 20);
+  font-weight: 700;
 }
 
 .desc {
@@ -160,7 +178,9 @@ header {
 }
 
 .description {
+  color: #313635;
   font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .link-more {
@@ -173,4 +193,31 @@ header {
 .active {
   background-color: gray;
   color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 99rem;
+  width: 100%;
+  min-height: 10rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  padding: 2rem;
+}
+
+footer p {
+  font-size: 2rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fee43a;
 }
